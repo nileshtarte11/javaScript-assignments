@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 8</h2>
+
+    <p>There’s a ladder object that allows to go up and down:</p>
+
+    <p>let ladder = { <br>
+        step: 0, <br>
+        up() { <br>
+        this.step++; <br>
+        },<br>
+        down() { <br>
+        this.step--; <br>
+        }, <br>
+        showStep: function() { // shows the current step <br>
+        alert( this.step ); <br>
+        } <br>
+        }; <br>
+    </p>
+
+    <p>Now, if we need to make several calls in sequence, can do it like this:</p>
+    <p>
+        ladder.up(); <br>
+        ladder.up(); <br>
+        ladder.down(); <br>
+        ladder.showStep(); // 1 <br>
+    </p>
+
+    <p>Modify the code of up, down and showStep to make the calls chainable, like this:</p>
+
+    <p>ladder.up().up().down().showStep(); // 1</p>
+
+
+    <script>
+
+        let ladder = {
+            step: 0,
+            up() {
+                this.step++;
+                return this;
+            },
+            down() {
+                this.step--;
+                return this;
+            },
+            showStep() {
+                console.log(this.step);
+                return this;
+            }
+        }
+
+        ladder.up().up().down().up().down().showStep();
+    </script>
+
+</body>
+
+</html>

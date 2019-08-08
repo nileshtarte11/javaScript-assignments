@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 3</h2>
+
+    <p>Create the function multiply all numeric properties of obj by 2</p>
+
+
+    <script>
+        var obj = {
+            width: 100,
+            height: 160,
+            title: 'My Menu',
+        };
+
+        function multiplyNumeric(obj) {
+            for (var el in obj) {
+                if (typeof obj[el] == 'number') {
+                    obj[el] = obj[el] * 2;
+                }
+            }
+            return obj
+        }
+
+        var multiplayByTwo = multiplyNumeric(obj);
+        console.log(multiplayByTwo);
+
+    </script>
+
+</body>
+
+</html>

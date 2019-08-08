@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 9</h2>
+
+    <p>Create a constructor function Calculator that creates objects with 3 methods:</p>
+
+    <ul>
+        <li>read() asks for two values using prompt and remembers them in object properties.</li>
+        <li>sum() returns the sum of these properties.</li>
+        <li>mul() returns the multiplication product of these properties.</li>
+    </ul>
+
+
+    <p>For instance:</p>
+
+
+    <p>let calculator = new Calculator();<br>
+        calculator.read();<br>
+
+        alert( "Sum=" + calculator.sum() ); <br>
+        alert( "Mul=" + calculator.mul() );</p>
+    <script>
+
+        function Calculator() {
+            this.values = function () {
+                firstValue = +prompt('Please enter first value'),
+                    secondValue = +prompt('Please enter second value')
+
+                this.sum(),
+                    this.multiplication()
+            },
+
+                this.sum = function () {
+                    let sum = firstValue + secondValue;
+                    console.log(`Sum of the two number is ${sum}`)
+                },
+
+                this.multiplication = function () {
+                    let multiplication = firstValue * secondValue;
+                    console.log(`Multiplication of two number is ${multiplication}`)
+                }
+        }
+
+        let calculator = new Calculator();
+        calculator.values();
+
+
+    </script>
+
+</body>
+
+</html>

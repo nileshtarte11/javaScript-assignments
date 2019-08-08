@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 7</h2>
+
+    <p>Create object calculator with three methods</p>
+
+    <p>
+        1. read() prompts for two values and saves them as object properties<br>
+        2. sum() return the sum of saved values<br>
+        3. mul() multiplies the saved values and return the result
+    </p>
+
+
+    <script>
+
+        var firstValue = +prompt('Please enter first value');
+        var secondValue = +prompt('Please enter second value');
+
+
+
+        if (typeof firstValue === 'number' && typeof secondValue === 'number') {
+            console.log(`Enter two numbers are ${firstValue} and ${secondValue}`);
+
+            let sum = firstValue + secondValue;
+            console.log(`Sum of the two number is ${sum}`)
+
+            let multiplication = firstValue * secondValue;
+            console.log(`Multiplication of two number is ${multiplication}`)
+        }
+        else {
+            console.log(`${firstValue} and ${secondValue} are Invalid`)
+        }
+
+
+    </script>
+
+</body>
+
+</html>

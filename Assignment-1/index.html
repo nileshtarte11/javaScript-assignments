@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 1</h2>
+
+    <p>
+        Write the function isEmpty(obj) which returns true if the object has no properties; false otherwise <br>
+        should be link that;
+    </p>
+
+    <p>
+        let schedule ={}; <br>
+        alert(isEmpty(schedule)); // true <br>
+
+        schedule["8:30"] = "get up"; <br>
+        alert(isEmpty(schedule)); <br>
+
+    </p>
+
+    <script>
+
+
+
+        const schedule = {};
+        schedule.prop1 = 88;
+        console.log(schedule)
+
+
+        // function isEmpty(schedule) {
+        //     for (let key in schedule) {
+        //         if (schedule.hasOwnProperty(key))
+        //             return false;
+        //     }
+        //     return true;
+        // }
+        // console.log(isEmpty(schedule));
+        // Second Approch
+        if (Object.keys(schedule).length === 0) {
+            console.log(true);
+        }
+        else {
+            console.log(false);
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

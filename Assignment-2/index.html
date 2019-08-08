@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 2</h2>
+
+    <p>
+        We have an object storing salaries of team:
+        <br>
+        let salaries ={
+        john: 100,
+        ann : 160,
+        pete : 130,
+        }
+    </p>
+
+    <p>
+        Write the code to sum all salaries and store in variable sum. shoould be 390 in the example above. If salaries
+        isEmpty, the result must be zero;
+    </p>
+
+    <script>
+        var salaries = {
+            john: 100,
+            ann: 160,
+            pete: 130,
+        };
+
+        if (Object.keys(salaries).length === 0) {
+            console.log('Salaries of team is zaro');
+        }
+        else {
+
+            function sum(obj) {
+                var sum = 0;
+                for (var el in obj) {
+                    if (obj.hasOwnProperty(el)) {
+                        sum += parseFloat(obj[el]);
+                    }
+                }
+                return sum;
+            }
+
+            var summed = sum(salaries);
+            console.log('Salaries of team' + ' ' + summed);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
