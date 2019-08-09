@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 14</h2>
+
+    <p>Write a function filterRangeInPlace(arr, a, b) that gets an array arr and removes from it all values except those
+        that
+        are between a and b. The test is: a ≤ arr[i] ≤ b.</p>
+
+    <p>The function should only modify the array. It should not return anything.</p>
+
+
+    <script>
+
+        var arr = [5, 3, 8, 1]
+        console.log(arr)
+
+        let filtered = filterRangeInPlace(arr, 1, 4);
+
+        function filterRangeInPlace(arr, a, b) {
+
+            for (let el of arr) {
+                if (a < el || el > b) {
+                    var index = arr.indexOf(el)
+                    if (index > -1) {
+                        arr.splice(index, 1);
+                    }
+                }
+            }
+
+        }
+
+        console.log(arr);
+    </script>
+
+</body>
+
+</html>

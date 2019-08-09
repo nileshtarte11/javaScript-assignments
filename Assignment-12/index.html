@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 12</h2>
+
+    <p>Write the Js code that changes dash-saparated word</p>
+
+
+    <script>
+        var name = "backgroung-image";
+
+        function dashSaparated(str) {
+            return str.replace(/-([a-z])/g, function (g) {
+                return g[1].toUpperCase();
+            });
+        }
+
+        console.log(dashSaparated(this.name));
+
+
+    </script>
+
+</body>
+
+</html>

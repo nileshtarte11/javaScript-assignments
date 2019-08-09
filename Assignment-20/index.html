@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 20</h2>
+
+    <p>Write the function sortByAge(users) that gets an array of objects with the age property and sorts them by age.
+    </p>
+
+
+    <script>
+        function sortByAge(arr) {
+            arr.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));;
+        }
+
+        let john = { name: "John", age: 25 };
+        let pete = { name: "Pete", age: 30 };
+        let mary = { name: "Mary", age: 28 };
+
+        let arr = [pete, john, mary];
+
+        sortByAge(arr);
+
+        console.log(arr);
+    </script>
+
+</body>
+
+</html>
