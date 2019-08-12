@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 22</h2>
+    <p>Write the destructuring assignment that reads:</p>
+
+    <ul>
+        <li>name property into the variable name.</li>
+        <li>years property into the variable age.</li>
+        <li>isAdmin property into the variable isAdmin (false, if no such property)</li>
+    </ul>
+
+    <script>
+
+        let user = { name: "John", years: 30 };
+
+        let { name, years, isAdmin = false } = user;
+
+        console.log(name);
+        console.log(years);
+        console.log(isAdmin);
+
+    </script>
+
+</body>
+
+</html>

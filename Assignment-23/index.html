@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 23</h2>
+
+    <p>
+        Create the function topSalary(salaries) that returns the name of the top-paid person.
+    </p>
+    <ul>
+        <li>If salaries is empty, it should return null.</li>
+        <li>If there are multiple top-paid persons, return any of them.</li>
+    </ul>
+    <p>
+        P.S. Use Object.entries and destructuring to iterate over key/value pairs.
+    </p>
+
+    <script>
+
+        let salaries = {
+            "John": 100,
+            "Pete": 300,
+            "Mary": 250
+        };
+
+
+        function topSalary(salaries) {
+            let max = 0;
+            let maxName = null;
+            for (const [name, salary] of Object.entries(salaries)) {
+                if (max < salary) {
+                    max = salary;
+                    maxName = name;
+                }
+            }
+
+            return `maxSalary ${max} and name is ${maxName}`;
+        }
+
+        console.log(topSalary(salaries));
+
+    </script>
+
+</body>
+
+</html>

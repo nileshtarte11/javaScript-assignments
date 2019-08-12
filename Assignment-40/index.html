@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 40</h2>
+    <p>Write function to get second largest number</p>
+
+
+    <script>
+
+        let num = [2, 3, 6, 6, 5];
+
+        maxNumber = 0;
+
+        function getSecondLargest(arr) {
+            let biggest = -Infinity;
+            let next_biggest = -Infinity;
+
+            for (var i = 0, n = arr.length; i < n; ++i) {
+                var nr = +arr[i]; // convert to number first
+
+                if (nr > biggest) {
+                    next_biggest = biggest; // save previous biggest value
+                    biggest = nr;
+                } else if (nr < biggest && nr > next_biggest) {
+                    next_biggest = nr; // new second biggest value
+                }
+            }
+
+            return next_biggest;
+        }
+
+        console.log(getSecondLargest(num));
+
+    </script>
+
+</body>
+
+</html>

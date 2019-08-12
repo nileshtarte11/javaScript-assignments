@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 21</h2>
+
+    <p>Let arr be an array.
+
+        Create a function unique(arr) that should return an array with unique items of arr.
+    </p>
+
+
+    <script>
+
+        function unique(strings) {
+            let result = [];
+
+            for (let str of strings) {
+                if (!result.includes(str)) {
+                    result.push(str);
+                }
+            }
+
+            return result;
+        }
+
+        let strings = ["Hare", "Krishna", "Hare", "Krishna",
+            "Krishna", "Krishna", "Hare", "Hare", ":-O"
+        ];
+
+        console.log(unique(strings));
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 33</h2>
+    <p>
+        Write a function checkSpam(str) that returns true if str contains ‘viagra’ or ‘XXX’, otherwise false.
+    </p>
+
+
+    <script>
+
+        function checkSpam(str) {
+            let lowerStr = str.toLowerCase();
+
+            return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+        }
+
+        console.log(checkSpam('buy ViAgRA now'));
+
+    </script>
+
+</body>
+
+</html>

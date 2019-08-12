@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 46</h2>
+
+    <p>There is a salaries object with arbitrary number of salaries.</p>
+
+    <p>Write the function sumSalaries(salaries) that returns the sum of all salaries using Object.values and the for..of
+        loop.
+    </p>
+    <p>
+        If salaries is empty, then the result must be 0.
+    </p>
+
+
+    <script>
+
+        function sumSalaries(salaries) {
+            let sum = 0;
+            for (let salary of Object.values(salaries)) {
+                sum += salary;
+            }
+
+            return sum;
+        }
+
+
+        let salaries = {
+            "John": 100,
+            "Pete": 300,
+            "Mary": 250
+        };
+
+        console.log(sumSalaries(salaries));
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 32</h2>
+    <p>
+        Write a function ucFirst(str) that returns the string str with the uppercased first character, for instance:
+    </p>
+
+
+    <script>
+
+        let str = 'john';
+
+        function ucFirst() {
+            return str.replace(
+                /\w\S*/g,
+                function (txt) {
+                    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+                }
+            );
+        }
+
+        console.log(ucFirst(str));
+
+    </script>
+
+</body>
+
+</html>
