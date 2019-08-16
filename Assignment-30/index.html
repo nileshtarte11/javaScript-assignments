@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 30</h2>
+
+    <p>
+        Create a function getSecondsToTomorrow() that returns the number of seconds till tomorrow.
+    </p>
+
+    <script>
+
+
+        function getSecondsToTomorrow() {
+            let date = new Date();
+
+            let today = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
+
+            let diff = today - date;
+
+            let secondsPassed = Math.round(diff / 1000);
+
+            return secondsPassed;
+        }
+
+        console.log(getSecondsToTomorrow());
+    </script>
+
+</body>
+
+</html>

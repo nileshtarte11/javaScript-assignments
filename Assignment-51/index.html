@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 51</h2>
+
+    <p>Output a single-linked list from the previous task Output a single-linked list in the reverse order.</p>
+    <script>
+        let list = {
+            value: 1,
+            next: {
+                value: 2,
+                next: {
+                    value: 3,
+                    next: {
+                        value: 4,
+                        next: null
+                    }
+                }
+            }
+        };
+
+        function printReverseList(list) {
+
+            // if (list.next) {
+            //     printReverseList(list.next);
+            // }
+
+            // console.log(list.value);
+
+            let arr = [];
+            let tmp = list;
+
+            while (tmp) {
+                arr.push(tmp.value);
+                tmp = tmp.next;
+            }
+
+            for (let i = arr.length - 1; i >= 0; i--) {
+                console.log(arr[i]);
+            }
+
+
+        }
+
+        printReverseList(list);
+
+    </script>
+
+</body>
+
+</html>

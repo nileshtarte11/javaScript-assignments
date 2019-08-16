@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 29</h2>
+
+    <p>
+        Write a function getSecondsToday() that returns the number of seconds from the beginning of today.
+    </p>
+
+    <script>
+
+
+        function getSecondsToday() {
+            let date = new Date();
+
+            let today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+            let diff = date - today;
+
+            let secondsPassed = Math.round(diff / 1000);
+
+            return secondsPassed;
+        }
+
+        console.log(getSecondsToday());
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 27</h2>
+
+    <p>
+        Create a function getDateAgo(date, days) to return the day of month days ago from the date.
+    </p>
+    <p>
+        For instance, if today is 20th, then getDateAgo(new Date(), 1) should be 19th and getDateAgo(new Date(), 2)
+        should be
+        18th.
+    </p>
+
+    <script>
+
+        let date = new Date();
+
+        function getDateAgo(date, days) {
+            let dateCopy = new Date(date);
+            dateCopy.setDate(date.getDate() - days)
+
+            return dateCopy;
+        }
+
+        console.log(getDateAgo(date, 2));
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 53</h2>
+
+
+    <p>
+        The factorial of a natural number is a number multiplied by "number minus one", then by "number minus two", and
+        so on
+        till 1. The factorial of n is denoted as n!
+    </p>
+    <p>
+        The task is to write a function factorial(n) that calculates n! using recursive calls.
+    </p>
+
+    <script>
+
+        function factorial(n) {
+            if (n == 1) return 1;
+            return n *= factorial(n - 1);
+        }
+
+
+        console.log(factorial(5));
+
+    </script>
+
+</body>
+
+</html>
