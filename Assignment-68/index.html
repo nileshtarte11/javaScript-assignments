@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 68</h2>
+
+    <p>
+        In the code below there’s a setTimeout call scheduled, then a heavy calculation is run, that takes more than
+        100ms to
+        finish.
+    </p>
+
+    <p>
+        When will the scheduled function run?
+    </p>
+    <ul>
+        <li>After the loop.</li>
+        <li>Before the loop.</li>
+    </ul>
+
+    <p>
+        In the beginning of the loop.
+    </p>
+    <p>
+        What is alert going to show?
+    </p>
+
+    <script>
+        let i = 0;
+        setTimeout(() => console.log(i), 100)
+
+        for (let j = 0; j < 100000000; j++) {
+            i++;
+        }
+
+    </script>
+
+</body>
+
+</html>

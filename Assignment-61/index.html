@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 61</h2>
+
+    <p>Create a funcation that implement sum of parameters</p>
+    <script>
+
+        function sum(a) {
+            var totalSum = a;
+
+            function f(b) {
+                totalSum += b;
+                return f;
+            }
+
+            f.toString = function () {
+                return totalSum;
+            }
+            return f;
+        }
+
+        console.log(sum(1)(2)(3));
+
+    </script>
+
+</body>
+
+</html>

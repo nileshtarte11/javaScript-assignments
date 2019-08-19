@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 60</h2>
+
+    <p>Create a funcation that implement a counter</p>
+    <script>
+
+        function makeCounter(newCount) {
+            let count = 0;
+
+
+            this.up = function () {
+                return ++count;
+            }
+
+
+            this.set = function () {
+                return count = 10;
+            };
+
+            this.decrease = function () {
+                ++count;
+                console.log(count);
+                return --count;
+            }
+
+
+        }
+
+        let counter = new makeCounter();
+
+        console.log(counter.up());
+        console.log(counter.up());
+        console.log(counter.set());
+        console.log(counter.decrease());
+    </script>
+
+</body>
+
+</html>

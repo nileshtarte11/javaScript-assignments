@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 65</h2>
+
+    <p>Sort array of object</p>
+
+
+    <script>
+        let users = [
+            { name: "John", age: 20, surname: "Johnson" },
+            { name: "Pete", age: 18, surname: "Peterson" },
+            { name: "Ann", age: 19, surname: "Hathaway" }
+        ];
+
+
+        function byField(filed) {
+            return (a, b) => a[filed] > b[filed] ? 1 : -1;
+        }
+
+        users.sort(byField('name'));
+
+        console.log(users);
+    </script>
+
+</body>
+
+</html>

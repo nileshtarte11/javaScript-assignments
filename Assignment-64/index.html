@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 64</h2>
+
+
+    <P>
+        We have a built-in method arr.filter(f) for arrays. It filters all elements through the function f. If it
+        returns true,
+        then that element is returned in the resulting array.
+    </P>
+    <p>
+        Make a set of “ready to use” filters:
+    </p>
+    <ul>
+        <li>
+            inBetween(a, b) – between a and b or equal to them (inclusively).
+        </li>
+        <li>
+            inArray([...]) – in the given array.
+        </li>
+    </ul>
+
+    <p>The usage must be like this:</p>
+
+    <ul>
+        <li>arr.filter(inBetween(3,6)) – selects only values between 3 and 6.</li>
+        <li>arr.filter(inArray([1,2,3])) – selects only elements matching with one of the members of [1,2,3].</li>
+    </ul>
+
+
+
+
+
+    <script>
+
+        let arr = [1, 2, 3, 4, 5, 6, 7];
+
+
+        function inBetween(a, b) {
+            return function (x) {
+                return x >= a && x <= b;
+            };
+        }
+
+        console.log(arr.filter(inBetween(3, 6)));
+
+        function inArray(arr) {
+            return function (x) {
+                return arr.includes(x)
+            };
+        }
+
+        arr.filter(inArray([1, 2, 3]))
+    </script>
+
+</body>
+
+</html>

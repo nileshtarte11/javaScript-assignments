@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 67</h2>
+
+    <p>
+        Write a function printNumbers(from, to) that outputs a number every second, starting from from and ending with
+        to.
+    </p>
+    <p>
+        Make two variants of the solution.
+    </p>
+    <ul>
+        <li>Using setInterval.</li>
+        <li>Using recursive setTimeout.</li>
+    </ul>
+
+    <script>
+
+        // Using setInterval
+
+        // function printNumbers(from, to) {
+        //     current = from;
+
+        //     interval = setInterval(() => {
+        //         if (current == to) {
+        //             clearInterval(interval);
+        //         }
+        //         console.log(current);
+        //         current++;
+
+        //     }, 1000)
+        // }
+
+        // printNumbers(5, 10);
+
+
+        // Using recursive setTimeout.
+
+
+        function printNumbers(from, to) {
+            current = from;
+
+            setTimeout(function timeOut() {
+                if (current < to) {
+                    setTimeout(timeOut, 1000)
+                }
+                console.log(current);
+                current++;
+
+            }, 1000)
+        }
+
+        printNumbers(5, 10);
+
+    </script>
+
+</body>
+
+</html>
