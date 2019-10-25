@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 70</h2>
+
+    <script>
+        function askPassword(success, fail) {
+            let password = prompt("Password", "");
+            if (password == 'spanidea') {
+                success()
+            }
+            else {
+                fail()
+            }
+        }
+
+        let user = {
+            name: 'John',
+
+            login(result) {
+                console.log(this.name +" " +(result ? 'Logged in' : 'failed to login'));
+            }
+        };
+
+        askPassword(user.login.bind(user, true), user.login.bind(user, false));
+
+    </script>
+
+</body>
+
+</html>

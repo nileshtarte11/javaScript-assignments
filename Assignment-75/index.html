@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 75</h2>
+
+    <script>
+
+        let animal = {
+            eat() {
+                this.full = true;
+            }
+        };
+
+        let rabbit = {
+            __proto__: animal
+        };
+
+        rabbit.eat();
+
+        alert('rabbit');
+    </script>
+
+</body>
+
+</html>

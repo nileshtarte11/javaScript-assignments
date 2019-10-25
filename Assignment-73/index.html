@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 73</h2>
+
+    <script>
+        let animal = {
+            jump: null,
+        }
+
+        let rabbit = {
+            __proto__: animal,
+            jump: true,
+        }
+
+        console.log(rabbit.jump);
+
+        delete rabbit.jump;
+
+        console.log(rabbit.jump);
+
+        delete animal.jump;
+
+        console.log(rabbit.jump);
+
+    </script>
+
+</body>
+
+</html>

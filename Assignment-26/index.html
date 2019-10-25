@@ -11,6 +11,7 @@
     </p>
 
     <script>
+        days = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU']
         let date = new Date(2012, 0, 3);
         function getLocalDay(date) {
             let day = date.getDay();
@@ -19,7 +20,7 @@
                 day = 7;
             }
 
-            return day;
+            return days[day];
         }
         console.log(getLocalDay(date));
     </script>

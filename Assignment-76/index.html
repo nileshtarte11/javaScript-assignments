@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 76</h2>
+
+    <script>
+        let hamster = {
+            stomach: [],
+
+            eat(food) {
+                this.stomach = food;
+            }
+        };
+
+        let speedy = {
+            __proto__: hamster,
+        }
+
+        let lazy = {
+            __proto__: hamster,
+        }
+
+        speedy.eat('apple');
+
+        console.log(speedy.stomach);
+        console.log(lazy.stomach);
+
+    </script>
+
+</body>
+
+</html>

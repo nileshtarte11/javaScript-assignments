@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Assignment 69</h2>
+
+    <script>
+        function askPassword(success, fail) {
+            let password = prompt("Password", "");
+            if (password == 'spanIdea') {
+                success()
+            }
+            else {
+                fail()
+            }
+        }
+
+        let user = {
+            name: 'John',
+
+            loginOk() {
+                console.log(`${this.name} logged in`);
+            },
+
+            loginFail() {
+                console.log(`${this.name} failed to log in`);
+            },
+        };
+
+        askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
+
+    </script>
+
+</body>
+
+</html>
